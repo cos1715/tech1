@@ -1,0 +1,62 @@
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 150px;
+            grid-template-rows: 80px 50px minmax(250px, auto) minmax(50px, 100px);
+            grid-template-areas: "header header header header header header" "main   main   main   main   main nav" "main  main   main   main   main aside" "foot  foot  foot  foot  foot  foot";
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #d9ead3;
+            border: 1px solid black;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #cfe2f3;
+            border: 1px solid black;
+        }
+
+        nav:hover {
+            font-size: 1.25em;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #cfe2f3;
+            border: 1px solid black;
+        }
+
+        aside p{
+            margin: 0;
+        }
+
+        aside p:hover {
+            font-size: 1.25em;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #fff2cc;
+            border: 1px solid black;
+        }
+
+        footer {
+            grid-area: foot;
+            background: #f3f3f3;
+            border: 1px solid black;
+        }
+
+        @media screen and (max-width: 600px) {
+            div {
+                grid-template-columns: 150px auto;
+                grid-template-rows: 80px minmax(50px, 100px) minmax(300px, auto) minmax(50px, 100px);
+                grid-template-areas: "header header header header header header" "nav aside aside aside aside aside" "main  main   main   main   main   main" "foot  foot   foot   foot   foot   foot";
+            }
+        }
