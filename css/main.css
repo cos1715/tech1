@@ -1,6 +1,7 @@
-        body {
+       body {
             margin: 0;
             font-family: sans-serif;
+            font-size: 1.5em;
         }
 
         div {
@@ -33,7 +34,7 @@
             border: 1px solid black;
         }
 
-        aside p{
+        aside p {
             margin: 0;
         }
 
@@ -56,7 +57,11 @@
         @media screen and (max-width: 600px) {
             div {
                 grid-template-columns: 150px auto;
-                grid-template-rows: 80px minmax(50px, 100px) minmax(300px, auto) minmax(50px, 100px);
+                grid-template-rows: 80px 0px minmax(300px, auto) minmax(50px, 100px);
                 grid-template-areas: "header header header header header header" "nav aside aside aside aside aside" "main  main   main   main   main   main" "foot  foot   foot   foot   foot   foot";
+            }
+            aside {
+                display: flex;
+                justify-content: space-around;
             }
         }
