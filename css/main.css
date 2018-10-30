@@ -21,6 +21,7 @@
             grid-area: nav;
             background-color: #cfe2f3;
             border: 1px solid black;
+            transition: all .5s;
         }
 
         nav:hover {
@@ -35,6 +36,7 @@
 
         aside p {
             margin: 0;
+            transition: all .5s;
         }
 
         aside p:hover {
